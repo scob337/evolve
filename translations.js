@@ -1,10 +1,41 @@
 const translations = {
     en: {
+        // Consultations
+        "consultations_title": "Consultations",
+        "consultant_details_title": "Consultant Details",
+        "back_to_consultations": "Back to Consultants",
+        "services_offered": "Services Offered",
+        "contact_consultant": "Contact Consultant",
+        "consultant_not_found": "Consultant not found.",
+        "name": "Name",
+        "name_placeholder": "Enter your name",
+        "email": "Email",
+        "email_placeholder": "Enter your email",
+        "phone": "Phone",
+        "phone_placeholder": "Enter your phone",
+        "send_message": "Send Message",
+        "sending": "Sending...",
+        "success_message": "Message sent successfully!",
+        "error_message": "Failed to send message. Please try again.",
+        "network_error": "Network error. Please try again.",
+        // Details Page
+        "meal_details_title": "Meal Details",
+        "back_to_menu": "Back to Menu",
+        "how_to_use": "How to Use",
+        "meal_not_found": "Meal not found.",
         // Navigation
         "home": "Home",
         "about": "About",
         "services": "Services",
         "contact": "Contact",
+        
+        // Menu Page
+        "menu_title": "Menu",
+        "usage": "Usage:",
+        "price": "Price:",
+        "currency": "SAR",
+        "view_details": "View Details",
+        "no_meals": "No meals found.",
         
         // Hero Section
         "hero_title": "Redefining Athletic Excellence",
@@ -100,11 +131,42 @@ const translations = {
         "rights_reserved": "All Rights Reserved."
     },
     ar: {
+        // Consultations
+        "consultations_title": "الاستشارات",
+        "consultant_details_title": "تفاصيل المستشار",
+        "back_to_consultations": "العودة للاستشاريين",
+        "services_offered": "الخدمات المقدمة",
+        "contact_consultant": "تواصل مع المستشار",
+        "consultant_not_found": "المستشار غير موجود.",
+        "name": "الاسم",
+        "name_placeholder": "ادخل اسمك",
+        "email": "البريد الإلكتروني",
+        "email_placeholder": "ادخل بريدك الإلكتروني",
+        "phone": "الجوال",
+        "phone_placeholder": "ادخل رقم الجوال",
+        "send_message": "إرسال الرسالة",
+        "sending": "جاري الإرسال...",
+        "success_message": "تم إرسال الرسالة بنجاح!",
+        "error_message": "فشل في إرسال الرسالة. حاول مرة أخرى.",
+        "network_error": "خطأ في الشبكة. حاول مرة أخرى.",
+        // Details Page
+        "meal_details_title": "تفاصيل الوجبة",
+        "back_to_menu": "العودة للقائمة",
+        "how_to_use": "طريقة الاستخدام",
+        "meal_not_found": "الوجبة غير موجودة.",
         // Navigation
         "home": "الرئيسية",
         "about": "من نحن",
         "services": "خدماتنا",
         "contact": "اتصل بنا",
+        
+        // Menu Page
+        "menu_title": "قائمة الوجبات",
+        "usage": "الاستخدام:",
+        "price": "السعر:",
+        "currency": "ر.س",
+        "view_details": "عرض التفاصيل",
+        "no_meals": "لا توجد وجبات متاحة.",
         
         // Hero Section
         "hero_title": "إعادة تعريف التميز الرياضي",

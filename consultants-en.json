@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Ahmed Al-Farsi",
+    "title": "Nutrition Consultant",
+    "image": "images/consultant-1.jpg",
+    "description": "Expert in sports nutrition and weight management.",
+    "services": ["Meal planning", "Weight loss coaching", "Sports nutrition"],
+    "email": "ahmed.farsi@example.com"
+  },
+  {
+    "id": 2,
+    "name": "Sara Al-Mutairi",
+    "title": "Fitness Coach",
+    "image": "images/consultant-2.jpg",
+    "description": "Specialist in personal training and fitness programs.",
+    "services": ["Personal training", "Fitness assessments", "Group classes"],
+    "email": "sara.mutairi@example.com"
+  }
+]

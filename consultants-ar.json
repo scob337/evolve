@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "د. أحمد الفارسي",
+    "title": "استشاري تغذية",
+    "image": "images/consultant-1.jpg",
+    "description": "خبير في التغذية الرياضية وإدارة الوزن.",
+    "services": ["تخطيط الوجبات", "تدريب على فقدان الوزن", "تغذية رياضية"],
+    "email": "ahmed.farsi@example.com"
+  },
+  {
+    "id": 2,
+    "name": "سارة المطيري",
+    "title": "مدربة لياقة",
+    "image": "images/consultant-2.jpg",
+    "description": "متخصصة في التدريب الشخصي وبرامج اللياقة البدنية.",
+    "services": ["تدريب شخصي", "تقييمات لياقة", "دروس جماعية"],
+    "email": "sara.mutairi@example.com"
+  }
+]
