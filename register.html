@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="register_title">Register - EVOLVE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/evolve-logo.svg" alt="EVOLVE Logo">
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#"  data-translate="home">Home</a></li>
+                    <li><a href="#about" data-translate="about">About</a></li>
+                    <li><a href="#services" data-translate="services">Services</a></li>
+                    <li><a href="menu.html" data-translate="menu_title">Menu</a></li>
+                    <li><a href="register.html" class="active" data-translate="register_nav">Register</a></li>
+                                           <li><a href="index.html#contact" data-translate="contact">Contact</a></li>
+                    <li class="language-switcher">
+                        <button id="lang-toggle" class="lang-btn">
+                            <span class="lang-text">English</span>
+                            <i class="fas fa-globe"></i>
+                        </button>
+                        <div class="language-dropdown">
+                            <a href="#" data-lang="en" class="active">English</a>
+                            <a href="#" data-lang="ar">العربية</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="register-section" style="padding:40px 0;">
+            <div class="container">
+                <div class="section-container" data-aos="fade-up">
+                    <h2 class="section-title" data-translate="register_title">Evolve Weight Loss Intake Survey</h2>
+                </div>
+                <div class="divider"></div>
+                <form id="register-form" class="evolve-form">
+                    <!-- Section: Basic Information -->
+                    <div class="form-card">
+                        <div class="card-header">
+                            <i class="fas fa-user-circle"></i>
+                            <h3 data-translate="basic_info">Basic Information</h3>
+                        </div>
+                        <div class="form-content">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="full_name" data-translate="full_name">Full Name</label>
+                                    <input type="text" id="full_name" name="Full Name" required>
+                                    <span class="error-message"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="age" data-translate="age">Age</label>
+                                    <input type="number" id="age" name="Age" min="1" required>
+                                    <span class="error-message"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label data-translate="gender">Gender</label>
+                                    <div class="radio-group">
+                                        <label class="radio-label"><input type="radio" name="Gender" value="Male" required> <span data-translate="male">Male</span></label>
+                                        <label class="radio-label"><input type="radio" name="Gender" value="Female"> <span data-translate="female">Female</span></label>
+                                    </div>
+                                    <span class="error-message"></span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="height" data-translate="height">Height (cm)</label>
+                                    <input type="number" id="height" name="Height" min="1" required>
+                                    <span class="error-message"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="weight" data-translate="weight">Weight (kg)</label>
+                                    <input type="number" id="weight" name="Weight" min="1" required>
+                                    <span class="error-message"></span>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="occupation" data-translate="occupation">Occupation</label>
+                                    <input type="text" id="occupation" name="Occupation">
+                                </div>
+                                <div class="form-group">
+                                    <label for="city_country" data-translate="city_country">City & Country</label>
+                                    <input type="text" id="city_country" name="City & Country">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section: Goals & Motivation -->
+                    <div class="form-card">
+                        <div class="card-header">
+                            <i class="fas fa-bullseye"></i>
+                            <h3 data-translate="goals_motivation">Goals & Motivation</h3>
+                        </div>
+                        <div class="form-content">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="target_weight" data-translate="target_weight">Target Weight (kg)</label>
+                                    <input type="number" id="target_weight" name="Target Weight">
+                                </div>
+                                <div class="form-group">
+                                    <label for="target_date" data-translate="target_date">By when?</label>
+                                    <input type="text" id="target_date" name="Target Date">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label data-translate="why_lose_weight">Why do you want to lose weight?</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label"><input type="checkbox" name="Why Lose Weight" value="Improve health"> <span data-translate="improve_health">Improve health</span></label>
+                                    <label class="checkbox-label"><input type="checkbox" name="Why Lose Weight" value="Improve appearance"> <span data-translate="improve_appearance">Improve appearance</span></label>
+                                    <label class="checkbox-label"><input type="checkbox" name="Why Lose Weight" value="Increase energy"> <span data-translate="increase_energy">Increase energy</span></label>
+                                    <label class="checkbox-label"><input type="checkbox" name="Why Lose Weight" value="Boost confidence"> <span data-translate="boost_confidence">Boost confidence</span></label>
+                                    <label class="checkbox-label"><input type="checkbox" name="Why Lose Weight" value="Prepare for an event"> <span data-translate="prepare_event">Prepare for an event</span></label>
+                                    <label class="checkbox-label"><input type="checkbox" name="Why Lose Weight" value="Doctor's recommendation"> <span data-translate="doctor_recommendation">Doctor's recommendation</span></label>
+                                    <label class="checkbox-label"><input type="checkbox" name="Why Lose Weight" value="Other"> <span data-translate="other">Other</span> <input type="text" name="Why Lose Weight Other" class="inline-input" placeholder="..."></label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label data-translate="motivation_scale">On a scale from 1–10, how motivated are you?</label>
+                                <div class="motivation-scale">
+                                    <label class="scale-label"><input type="radio" name="Motivation Scale" value="1"> 1</label>
+                                    <label class="scale-label"><input type="radio" name="Motivation Scale" value="2"> 2</label>
+                                    <label class="scale-label"><input type="radio" name="Motivation Scale" value="3"> 3</label>
+                                    <label class="scale-label"><input type="radio" name="Motivation Scale" value="4"> 4</label>
+                                    <label class="scale-label"><input type="radio" name="Motivation Scale" value="5"> 5</label>
+                                    <label class="scale-label"><input type="radio" name="Motivation Scale" value="6"> 6</label>
+                                    <label class="scale-label"><input type="radio" name="Motivation Scale" value="7"> 7</label>
+                                    <label class="scale-label"><input type="radio" name="Motivation Scale" value="8"> 8</label>
+                                    <label class="scale-label"><input type="radio" name="Motivation Scale" value="9"> 9</label>
+                                    <label class="scale-label"><input type="radio" name="Motivation Scale" value="10"> 10</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section: Health & Medical -->
+                    <div class="form-card">
+                        <div class="card-header">
+                            <i class="fas fa-heartbeat"></i>
+                            <h3 data-translate="health_medical">Health & Medical</h3>
+                        </div>
+                        <div class="form-content">
+                            <div class="form-group">
+                                <label data-translate="conditions">Do you have any of the following conditions?</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label"><input type="checkbox" name="Conditions" value="Diabetes"> <span data-translate="diabetes">Diabetes</span></label>
+                                    <label class="checkbox-label"><input type="checkbox" name="Conditions" value="High blood pressure"> <span data-translate="high_bp">High blood pressure</span></label>
+                                    <label class="checkbox-label"><input type="checkbox" name="Conditions" value="High cholesterol"> <span data-translate="high_cholesterol">High cholesterol</span></label>
+                                    <label class="checkbox-label"><input type="checkbox" name="Conditions" value="PCOS"> <span data-translate="pcos">PCOS</span></label>
+                                    <label class="checkbox-label"><input type="checkbox" name="Conditions" value="Thyroid issues"> <span data-translate="thyroid">Thyroid issues</span></label>
+                                    <label class="checkbox-label"><input type="checkbox" name="Conditions" value="Joint problems"> <span data-translate="joint_problems">Joint problems</span></label>
+                                    <label class="checkbox-label"><input type="checkbox" name="Conditions" value="Sleep apnea"> <span data-translate="sleep_apnea">Sleep apnea</span></label>
+                                    <label class="checkbox-label"><input type="checkbox" name="Conditions" value="Other"> <span data-translate="other">Other</span> <input type="text" name="Conditions Other" class="inline-input" placeholder="..."></label>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label data-translate="medications">Are you currently taking any medications?</label>
+                                    <div class="radio-group">
+                                        <label class="radio-label"><input type="radio" name="Medications" value="Yes"> <span data-translate="yes">Yes</span> <input type="text" name="Medications Details" class="inline-input" placeholder="..."></label>
+                                        <label class="radio-label"><input type="radio" name="Medications" value="No"> <span data-translate="no">No</span></label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label data-translate="allergies">Do you have any food allergies or intolerances?</label>
+                                    <div class="radio-group">
+                                        <label class="radio-label"><input type="radio" name="Allergies" value="Yes"> <span data-translate="yes">Yes</span> <input type="text" name="Allergies Details" class="inline-input" placeholder="..."></label>
+                                        <label class="radio-label"><input type="radio" name="Allergies" value="No"> <span data-translate="no">No</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label data-translate="doctor_clearance">Do you have clearance from a doctor to begin a diet or fitness plan?</label>
+                                <div class="radio-group">
+                                    <label class="radio-label"><input type="radio" name="Doctor Clearance" value="Yes"> <span data-translate="yes">Yes</span></label>
+                                    <label class="radio-label"><input type="radio" name="Doctor Clearance" value="No"> <span data-translate="no">No</span></label>
+                                    <label class="radio-label"><input type="radio" name="Doctor Clearance" value="Not sure"> <span data-translate="not_sure">Not sure</span></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section: Current Habits -->
+                    <div class="form-card">
+                        <div class="card-header">
+                            <i class="fas fa-clock"></i>
+                            <h3 data-translate="current_habits">Current Habits</h3>
+                        </div>
+                        <div class="form-content">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label data-translate="meals_per_day">How many meals do you eat per day?</label>
+                                    <div class="radio-group">
+                                        <label class="radio-label"><input type="radio" name="Meals Per Day" value="1"> 1</label>
+                                        <label class="radio-label"><input type="radio" name="Meals Per Day" value="2"> 2</label>
+                                        <label class="radio-label"><input type="radio" name="Meals Per Day" value="3"> 3</label>
+                                        <label class="radio-label"><input type="radio" name="Meals Per Day" value="4+"> 4+</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label data-translate="eat_out">How often do you eat out or order food weekly?</label>
+                                    <div class="radio-group">
+                                        <label class="radio-label"><input type="radio" name="Eat Out" value="Never"> <span data-translate="never">Never</span></label>
+                                        <label class="radio-label"><input type="radio" name="Eat Out" value="1–2 times"> 1–2 <span data-translate="times">times</span></label>
+                                        <label class="radio-label"><input type="radio" name="Eat Out" value="3–5 times"> 3–5 <span data-translate="times">times</span></label>
+                                        <label class="radio-label"><input type="radio" name="Eat Out" value="Daily"> <span data-translate="daily">Daily</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label data-translate="sugary_drinks">Do you consume sugary drinks?</label>
+                                    <div class="radio-group">
+                                        <label class="radio-label"><input type="radio" name="Sugary Drinks" value="Rarely"> <span data-translate="rarely">Rarely</span></label>
+                                        <label class="radio-label"><input type="radio" name="Sugary Drinks" value="Sometimes"> <span data-translate="sometimes">Sometimes</span></label>
+                                        <label class="radio-label"><input type="radio" name="Sugary Drinks" value="Daily"> <span data-translate="daily">Daily</span></label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label data-translate="water_per_day">On average, how much water do you drink per day?</label>
+                                    <div class="radio-group">
+                                        <label class="radio-label"><input type="radio" name="Water Per Day" value="< 1L"> &lt; 1L</label>
+                                        <label class="radio-label"><input type="radio" name="Water Per Day" value="1–2L"> 1–2L</label>
+                                        <label class="radio-label"><input type="radio" name="Water Per Day" value="2–3L"> 2–3L</label>
+                                        <label class="radio-label"><input type="radio" name="Water Per Day" value="3+L"> 3+L</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label data-translate="sleep_hours">How many hours of sleep do you get on average?</label>
+                                    <div class="radio-group">
+                                        <label class="radio-label"><input type="radio" name="Sleep Hours" value="< 5"> &lt; 5</label>
+                                        <label class="radio-label"><input type="radio" name="Sleep Hours" value="5–6"> 5–6</label>
+                                        <label class="radio-label"><input type="radio" name="Sleep Hours" value="7–8"> 7–8</label>
+                                        <label class="radio-label"><input type="radio" name="Sleep Hours" value="8+"> 8+</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label data-translate="exercise_per_week">How often do you exercise per week?</label>
+                                    <div class="radio-group">
+                                        <label class="radio-label"><input type="radio" name="Exercise Per Week" value="Never"> <span data-translate="never">Never</span></label>
+                                        <label class="radio-label"><input type="radio" name="Exercise Per Week" value="1–2x"> 1–2x</label>
+                                        <label class="radio-label"><input type="radio" name="Exercise Per Week" value="3–4x"> 3–4x</label>
+                                        <label class="radio-label"><input type="radio" name="Exercise Per Week" value="5+"> 5+</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label data-translate="exercise_type">What type of exercise do you currently do?</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label"><input type="checkbox" name="Exercise Type" value="Walking"> <span data-translate="walking">Walking</span></label>
+                                    <label class="checkbox-label"><input type="checkbox" name="Exercise Type" value="Gym"> <span data-translate="gym">Gym</span></label>
+                                    <label class="checkbox-label"><input type="checkbox" name="Exercise Type" value="Home workouts"> <span data-translate="home_workouts">Home workouts</span></label>
+                                    <label class="checkbox-label"><input type="checkbox" name="Exercise Type" value="Swimming"> <span data-translate="swimming">Swimming</span></label>
+                                    <label class="checkbox-label"><input type="checkbox" name="Exercise Type" value="Cycling"> <span data-translate="cycling">Cycling</span></label>
+                                    <label class="checkbox-label"><input type="checkbox" name="Exercise Type" value="Other"> <span data-translate="other">Other</span> <input type="text" name="Exercise Type Other" class="inline-input" placeholder="..."></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section: Preferences & Support -->
+                    <div class="form-card">
+                        <div class="card-header">
+                            <i class="fas fa-sliders-h"></i>
+                            <h3 data-translate="preferences_support">Preferences & Support</h3>
+                        </div>
+                        <div class="form-content">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label data-translate="meal_plan_pref">Do you prefer:</label>
+                                    <div class="radio-group">
+                                        <label class="radio-label"><input type="radio" name="Meal Plan Preference" value="Structured meal plan"> <span data-translate="structured_meal_plan">A structured meal plan</span></label>
+                                        <label class="radio-label"><input type="radio" name="Meal Plan Preference" value="Flexible eating"> <span data-translate="flexible_eating">Flexible eating with guidance</span></label>
+                                        <label class="radio-label"><input type="radio" name="Meal Plan Preference" value="Meal delivery"> <span data-translate="meal_delivery">Meal delivery</span></label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label data-translate="training_interest">Are you interested in:</label>
+                                    <div class="checkbox-group">
+                                        <label class="checkbox-label"><input type="checkbox" name="Training Interest" value="Personal training"> <span data-translate="personal_training">Personal training</span></label>
+                                        <label class="checkbox-label"><input type="checkbox" name="Training Interest" value="Group training"> <span data-translate="group_training">Group training</span></label>
+                                        <label class="checkbox-label"><input type="checkbox" name="Training Interest" value="Online training"> <span data-translate="online_training">Online training</span></label>
+                                        <label class="checkbox-label"><input type="checkbox" name="Training Interest" value="Nutrition consultation only"> <span data-translate="nutrition_only">Nutrition consultation only</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label data-translate="dietary_restrictions">Do you have any religious or dietary restrictions?</label>
+                                    <div class="radio-group">
+                                        <label class="radio-label"><input type="radio" name="Dietary Restrictions" value="Yes"> <span data-translate="yes">Yes</span> <input type="text" name="Dietary Restrictions Details" class="inline-input" placeholder="..."></label>
+                                        <label class="radio-label"><input type="radio" name="Dietary Restrictions" value="No"> <span data-translate="no">No</span></label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label data-translate="coach_gender_pref">Would you prefer a coach of a specific gender?</label>
+                                    <div class="radio-group">
+                                        <label class="radio-label"><input type="radio" name="Coach Gender Preference" value="Male"> <span data-translate="male">Male</span></label>
+                                        <label class="radio-label"><input type="radio" name="Coach Gender Preference" value="Female"> <span data-translate="female">Female</span></label>
+                                        <label class="radio-label"><input type="radio" name="Coach Gender Preference" value="No preference"> <span data-translate="no_preference">No preference</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label data-translate="coach_support">How much support do you want from your coach?</label>
+                                <div class="radio-group">
+                                    <label class="radio-label"><input type="radio" name="Coach Support" value="Daily check-ins"> <span data-translate="daily_checkins">Daily check-ins</span></label>
+                                    <label class="radio-label"><input type="radio" name="Coach Support" value="Weekly check-ins"> <span data-translate="weekly_checkins">Weekly check-ins</span></label>
+                                    <label class="radio-label"><input type="radio" name="Coach Support" value="Monthly"> <span data-translate="monthly">Monthly</span></label>
+                                    <label class="radio-label"><input type="radio" name="Coach Support" value="Only as needed"> <span data-translate="as_needed">Only as needed</span></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Section: Lifestyle & Readiness -->
+                    <div class="form-card">
+                        <div class="card-header">
+                            <i class="fas fa-balance-scale"></i>
+                            <h3 data-translate="lifestyle_readiness">Lifestyle & Readiness</h3>
+                        </div>
+                        <div class="form-content">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label data-translate="stressed">Do you feel stressed regularly?</label>
+                                    <div class="radio-group">
+                                        <label class="radio-label"><input type="radio" name="Stressed" value="Yes"> <span data-translate="yes">Yes</span></label>
+                                        <label class="radio-label"><input type="radio" name="Stressed" value="No"> <span data-translate="no">No</span></label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label data-translate="smoke">Do you smoke or vape?</label>
+                                    <div class="radio-group">
+                                        <label class="radio-label"><input type="radio" name="Smoke" value="Yes"> <span data-translate="yes">Yes</span></label>
+                                        <label class="radio-label"><input type="radio" name="Smoke" value="No"> <span data-translate="no">No</span></label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label data-translate="alcohol">Do you drink alcohol?</label>
+                                    <div class="radio-group">
+                                        <label class="radio-label"><input type="radio" name="Alcohol" value="Yes"> <span data-translate="yes">Yes</span></label>
+                                        <label class="radio-label"><input type="radio" name="Alcohol" value="No"> <span data-translate="no">No</span></label>
+                                        <label class="radio-label"><input type="radio" name="Alcohol" value="Occasionally"> <span data-translate="occasionally">Occasionally</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label data-translate="biggest_challenge">What's your biggest challenge when trying to lose weight?</label>
+                                <textarea name="Biggest Challenge" rows="2"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label data-translate="worked_before">What has worked for you in the past, if anything?</label>
+                                <textarea name="Worked Before" rows="2"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label data-translate="support_system">Do you have a support system (friends/family)?</label>
+                                <div class="radio-group">
+                                    <label class="radio-label"><input type="radio" name="Support System" value="Yes"> <span data-translate="yes">Yes</span></label>
+                                    <label class="radio-label"><input type="radio" name="Support System" value="No"> <span data-translate="no">No</span></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://evolvetheapp.com/thank-you.html">
+                    <input type="hidden" name="_template" value="table">
+                    <div id="register-form-notification" class="form-notification"></div>
+                    
+                    <div class="submit-container">
+                        <button type="submit" id="register-submit-btn" class="evolve-btn" data-aos="zoom-in" data-aos-delay="100">
+                            <span data-translate="send_btn">Submit Registration</span>
+                            <span class="loading-spinner"><i class="fas fa-spinner fa-spin"></i></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/evolve-logo-white.svg" alt="EVOLVE Logo">
+                    <p data-translate="footer_desc">Transforming lives through personalized nutrition and fitness coaching.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3 data-translate="quick_links">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html" data-translate="home">Home</a></li>
+                        <li><a href="index.html#about" data-translate="about">About</a></li>
+                        <li><a href="index.html#services" data-translate="services">Services</a></li>
+                        <li><a href="menu.html" data-translate="menu_title">Menu</a></li>
+                        <li><a href="register.html" data-translate="register_nav">Register</a></li>
+                        <li><a href="index.html#contact" data-translate="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3 data-translate="legal">Legal</h3>
+                    <ul>
+                        <li><a href="#" data-translate="privacy_policy">Privacy Policy</a></li>
+                        <li><a href="#" data-translate="terms">Terms of Service</a></li>
+                        <li><a href="#" data-translate="disclaimer">Disclaimer</a></li>
+                    </ul>
+                </div>
+                <div class="footer-hours">
+                    <h3 data-translate="hours">Hours</h3>
+                    <ul>
+                        <li data-translate="mon_fri">Monday - Friday: 8am - 8pm</li>
+                        <li data-translate="saturday">Saturday: 9am - 6pm</li>
+                        <li data-translate="sunday">Sunday: 10am - 4pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-translate="copyright">© 2023 EVOLVE. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    
+    <!-- Form Handling Script -->
+    <script>
+                // كود تفعيل زر البرجر للقائمة
+                document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        // إضافة زر إغلاق للقائمة فقط في الشاشات الصغيرة
+        function handleResize() {
+        // إزالة زر الإغلاق إذا كان موجودًا
+        const existingCloseButton = document.querySelector('.close-menu');
+        if (existingCloseButton) {
+        existingCloseButton.remove();
+        }
+        
+        // إضافة زر الإغلاق فقط في الشاشات الصغيرة
+        if (window.innerWidth <= 768) {
+        const closeButton = document.createElement('button');
+        closeButton.className = 'close-menu';
+        closeButton.innerHTML = '<i class="fas fa-times"></i>';
+        navLinks.prepend(closeButton);
+        
+        // تفعيل إغلاق القائمة
+        closeButton.addEventListener('click', function() {
+        navLinks.classList.remove('active');
+        });
+        }
+        }
+        
+        // تنفيذ الدالة عند تحميل الصفحة وعند تغيير حجم النافذة
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        
+        // تفعيل فتح القائمة
+        hamburger.addEventListener('click', function() {
+        navLinks.classList.add('active');
+        });
+        
+        // إغلاق القائمة عند النقر على أي رابط
+        const navItems = document.querySelectorAll('.nav-links a');
+        navItems.forEach(item => {
+        item.addEventListener('click', function() {
+        // إزالة الكلاس active من جميع الروابط
+        navItems.forEach(link => link.classList.remove('active'));
+        // إضافة الكلاس active للرابط الذي تم النقر عليه
+        this.classList.add('active');
+        navLinks.classList.remove('active');
+        
+        });
+        });
+        
+        // إغلاق القائمة عند النقر خارجها
+        document.addEventListener('click', function(e) {
+        if (!navLinks.contains(e.target) && !hamburger.contains(e.target) && navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+        }
+        });
+        });
+        
+
+    
+    // Back to Top Button
+    const backToTopButton = document.getElementById('back-to-top');
+    
+    // تفعيل زر العودة إلى الأعلى عند التمرير
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+            header.style.padding = '20px 0';
+            backToTopButton.classList.add('active');
+                    updateActiveNavOnScroll();
+
+        } else {
+            header.style.padding = '20px 0';
+            backToTopButton.classList.remove('active');
+        }
+        
+        // تحديث الكلاس active عند التمرير
+    });
+    
+    // Back to Top Button Click Event
+    backToTopButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    
+        
+        // تحديث الكلاس active عند التمرير
+function updateActiveNavOnScroll() {
+    const sections = document.querySelectorAll('section[id]');
+    const scrollPosition = window.scrollY + 200; // إضافة هامش للتأكد من تفعيل القسم في الوقت المناسب
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionId = section.getAttribute('id');
+
+        if (scrollPosition >= sectionTop) {
+            // إزالة الكلاس active من جميع الروابط
+            navItems.forEach(item => item.classList.remove('active'));
+
+            // إضافة الكلاس active للرابط المقابل للقسم الحالي
+            const correspondingLink = document.querySelector(`.nav-links a[href="#${sectionId}"]`);
+            if (correspondingLink) {
+                correspondingLink.classList.add('active');
+            }
+        }
+    });
+}
+
+        // تفعيل الرابط الأول عند تحميل الصفحة
+        window.addEventListener('load', function() {
+            // تفعيل الرابط الأول افتراضيًا
+            const firstNavItem = document.querySelector('.nav-links a');
+            if (firstNavItem) {
+                firstNavItem.classList.add('active');
+            }
+            
+            // تحديث الكلاس active عند التمرير
+            updateActiveNavOnScroll();
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            // تحديد عناصر النموذج
+            const form = document.getElementById('register-form');
+            const submitBtn = document.getElementById('register-submit-btn');
+            const notification = document.getElementById('register-form-notification');
+            
+            // تفعيل الحقول المشروطة
+            const radioInputs = document.querySelectorAll('.radio-label input[type="radio"]');
+            const checkboxInputs = document.querySelectorAll('.checkbox-label input[type="checkbox"]');
+            
+            // تحديث حالة الحقول المشروطة عند تغيير الاختيار
+            function updateConditionalInputs(input) {
+                const parent = input.closest('.radio-label, .checkbox-label');
+                const inlineInput = parent.querySelector('.inline-input');
+                
+                if (inlineInput) {
+                    if (input.checked) {
+                        inlineInput.style.display = 'inline-block';
+                        inlineInput.setAttribute('required', input.hasAttribute('required'));
+                    } else {
+                        inlineInput.style.display = 'none';
+                        inlineInput.removeAttribute('required');
+                    }
+                }
+            }
+            
+            // إضافة مستمعي الأحداث للأزرار الراديو
+            radioInputs.forEach(input => {
+                // تحديث الحالة الأولية
+                updateConditionalInputs(input);
+                
+                input.addEventListener('change', () => {
+                    // إعادة تعيين جميع الحقول المشروطة في نفس المجموعة
+                    const name = input.getAttribute('name');
+                    document.querySelectorAll(`input[name="${name}"]`).forEach(radio => {
+                        updateConditionalInputs(radio);
+                    });
+                });
+            });
+            
+            // إضافة مستمعي الأحداث لمربعات الاختيار
+            checkboxInputs.forEach(input => {
+                // تحديث الحالة الأولية
+                updateConditionalInputs(input);
+                
+                input.addEventListener('change', () => {
+                    updateConditionalInputs(input);
+                });
+            });
+            
+            // تفعيل مقياس الحماس
+            const scaleLabels = document.querySelectorAll('.scale-label');
+            scaleLabels.forEach(label => {
+                const input = label.querySelector('input[type="radio"]');
+                
+                input.addEventListener('change', () => {
+                    // إزالة الفئة المحددة من جميع التسميات
+                    scaleLabels.forEach(l => l.classList.remove('selected'));
+                    
+                    // إضافة الفئة المحددة إلى التسمية المحددة
+                    if (input.checked) {
+                        label.classList.add('selected');
+                    }
+                });
+                
+                // تحديث الحالة الأولية
+                if (input.checked) {
+                    label.classList.add('selected');
+                }
+            });
+            
+            // التحقق من صحة النموذج
+            function validateForm() {
+                let isValid = true;
+                const requiredInputs = form.querySelectorAll('input[required], select[required], textarea[required]');
+                
+                // إعادة تعيين رسائل الخطأ
+                form.querySelectorAll('.error-message').forEach(msg => {
+                    msg.textContent = '';
+                });
+                
+                // التحقق من الحقول المطلوبة
+                requiredInputs.forEach(input => {
+                    const errorMessage = input.nextElementSibling;
+                    
+                    if (input.type === 'radio') {
+                        // التحقق من أزرار الراديو
+                        const name = input.getAttribute('name');
+                        const checked = form.querySelector(`input[name="${name}"]:checked`);
+                        
+                        if (!checked) {
+                            isValid = false;
+                            const group = input.closest('.form-group');
+                            const errorEl = group.querySelector('.error-message');
+                            if (errorEl) {
+                                errorEl.textContent = 'هذا الحقل مطلوب';
+                            }
+                        }
+                    } else if (input.value.trim() === '') {
+                        // التحقق من الحقول النصية
+                        isValid = false;
+                        if (errorMessage && errorMessage.classList.contains('error-message')) {
+                            errorMessage.textContent = 'هذا الحقل مطلوب';
+                        }
+                    }
+                });
+                
+                return isValid;
+            }
+            
+            // معالجة إرسال النموذج
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // التحقق من صحة النموذج
+                    if (!validateForm()) {
+                        notification.className = 'form-notification error';
+                        notification.textContent = 'يرجى ملء جميع الحقول المطلوبة';
+                        notification.style.display = 'block';
+                        
+                        // التمرير إلى أول حقل به خطأ
+                        const firstError = form.querySelector('.error-message:not(:empty)');
+                        if (firstError) {
+                            firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }
+                        
+                        return;
+                    }
+                    
+                    // إظهار حالة التحميل
+                    submitBtn.classList.add('loading');
+                    submitBtn.disabled = true;
+                    
+                    // إظهار إشعار الإرسال
+                    notification.className = 'form-notification sending';
+                    notification.textContent = 'جاري إرسال البيانات...';
+                    notification.style.display = 'block';
+                    
+                    // إعداد بيانات النموذج للإرسال
+                    const formData = new FormData(form);
+                    
+                    // محاكاة إرسال النموذج (استبدل هذا بالإرسال الفعلي)
+                    setTimeout(() => {
+                        // نجاح الإرسال
+                        submitBtn.classList.remove('loading');
+                        notification.className = 'form-notification success';
+                        notification.textContent = 'تم إرسال النموذج بنجاح!';
+                        notification.style.display = 'block';
+                        
+                        // تمرير المستخدم إلى صفحة الشكر بعد فترة قصيرة
+                        setTimeout(() => {
+                            window.location.href = form.querySelector('input[name="_next"]').value;
+                        }, 2000);
+                    }, 1500);
+                });
+            }
+            
+            // إضافة CSS لإخفاء الحقول المشروطة في البداية
+            const style = document.createElement('style');
+            style.textContent = `
+                .inline-input {
+                    display: none;
+                }
+                
+                .form-notification {
+                    padding: 16px 20px;
+                    margin: 20px 0;
+                    border-radius: 10px;
+                    display: none;
+                    animation: fadeIn 0.4s ease;
+                    font-size: 0.95rem;
+                    line-height: 1.5;
+                    position: relative;
+                    padding-left: 50px;
+                    text-align: left;
+                }
+                
+                .form-notification:before {
+                    content: '';
+                    position: absolute;
+                    left: 16px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 24px;
+                    height: 24px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+                
+                @keyframes fadeIn {
+                    from { opacity: 0; transform: translateY(-10px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+                
+                .form-notification.success {
+                    background: #f0fdf4;
+                    color: #166534;
+                    border: 1px solid #bbf7d0;
+                }
+                
+                .form-notification.success:before {
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23166534' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z'/%3E%3C/svg%3E");
+                }
+                
+                .form-notification.error {
+                    background: #fef2f2;
+                    color: #991b1b;
+                    border: 1px solid #fecaca;
+                }
+                
+                .form-notification.error:before {
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23991b1b' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z'/%3E%3C/svg%3E");
+                }
+                
+                .form-notification.sending {
+                    background: #eff6ff;
+                    color: #1e40af;
+                    border: 1px solid #bfdbfe;
+                }
+                
+                .form-notification.sending:before {
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%231e40af' viewBox='0 0 24 24'%3E%3Cpath d='M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46c.83-1.31 1.24-2.83 1.24-4.26 0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.41 9.05 4 10.55 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z'/%3E%3C/svg%3E");
+                    animation: spin 1s linear infinite;
+                }
+                
+                @keyframes spin {
+                    to { transform: translateY(-50%) rotate(360deg); }
+                }
+                
+                html[dir="rtl"] .form-notification {
+                    padding-left: 20px;
+                    padding-right: 50px;
+                    text-align: right;
+                }
+                
+                html[dir="rtl"] .form-notification:before {
+                    left: auto;
+                    right: 16px;
+                }
+                
+                .scale-label.selected {
+                    background-color: var(--primary-color);
+                    border-color: var(--primary-color);
+                    color: white;
+                }
+                
+                .scale-label.selected span {
+                    color: white !important;
+                }
+                
+                .evolve-btn .loading-spinner {
+                    display: none;
+                    margin-left: 10px;
+                }
+                
+                .evolve-btn.loading .loading-spinner {
+                    display: inline-block;
+                }
+                
+                html[dir="rtl"] .evolve-btn .loading-spinner {
+                    margin-left: 0;
+                    margin-right: 10px;
+                }
+                
+                /* تحسين مظهر النموذج */
+                .register-section {
+                    background-color: #f9f9f9;
+                    background-image: linear-gradient(135deg, #f9f9f9 0%, #f5f5f5 100%);
+                    padding: 50px 0;
+                }
+                
+                .evolve-form .form-card:last-child {
+                    margin-bottom: 10px;
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+
+     <!-- إضافة سكريبت الترجمة -->
+     <script src="translations.js"></script>
+     <script>
+         // كود تبديل اللغة
+         document.addEventListener('DOMContentLoaded', function() {
+             // تحديد اللغة الافتراضية
+             let currentLang = localStorage.getItem('language') || 'en';
+             
+             // تطبيق اللغة المحفوظة
+             applyLanguage(currentLang);
+             
+             // تحديث زر اللغة
+             updateLanguageButton(currentLang);
+             
+             // إضافة مستمعي الأحداث لروابط تبديل اللغة
+             document.querySelectorAll('.language-dropdown a').forEach(link => {
+                 link.addEventListener('click', function(e) {
+                     e.preventDefault();
+                     const lang = this.getAttribute('data-lang');
+                     
+                     // تحديث اللغة الحالية
+                     currentLang = lang;
+                     
+                     // حفظ اللغة في التخزين المحلي
+                     localStorage.setItem('language', lang);
+                     
+                     // تطبيق اللغة
+                     applyLanguage(lang);
+                     
+                     // تحديث زر اللغة
+                     updateLanguageButton(lang);
+                 window.location.reload();
+                     
+                     // تحديث الكلاس النشط
+                     document.querySelectorAll('.language-dropdown a').forEach(a => {
+                         a.classList.remove('active');
+                     });
+                     this.classList.add('active');
+                 });
+             });
+             
+             // دالة تطبيق اللغة
+             function applyLanguage(lang) {
+                 // تعيين اتجاه الصفحة
+                 document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+                 
+                 // إضافة الخط العربي إذا كانت اللغة عربية
+                 if (lang === 'ar' && !document.getElementById('arabic-font')) {
+                     const fontLink = document.createElement('link');
+                     fontLink.id = 'arabic-font';
+                     fontLink.rel = 'stylesheet';
+                     fontLink.href = 'https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap';
+                     document.head.appendChild(fontLink);
+                 }
+                 
+                 // تحديث جميع العناصر التي تحتاج إلى ترجمة
+                 document.querySelectorAll('[data-translate]').forEach(element => {
+                     const key = element.getAttribute('data-translate');
+                     
+                     if (translations[lang][key]) {
+                         if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                             // للحقول النصية، نحدث السمة placeholder
+                             if (key.includes('placeholder')) {
+                                 element.placeholder = translations[lang][key];
+                             } else {
+                                 element.value = translations[lang][key];
+                             }
+                         } else {
+                             // للعناصر الأخرى، نحدث المحتوى HTML
+                             element.innerHTML = translations[lang][key];
+                         }
+                     }
+                 });
+             }
+             
+             // دالة تحديث زر اللغة
+             function updateLanguageButton(lang) {
+                 const langText = document.querySelector('.lang-text');
+                 if (langText) {
+                     langText.textContent = lang === 'en' ? 'English' : 'العربية';
+                 }
+             }
+         });
+     </script>
+</body>
+</html>
